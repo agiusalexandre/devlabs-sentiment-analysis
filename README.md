@@ -84,14 +84,20 @@ Once the job completes the MP3 is converted back into text and stored in same s3
 
  
 # Step 7: Visualize Analysis using Amazon QuickSight
-We can visualize Amazon Comprehend’s sentiment analysis by using Amazon QuickSight. First, we must grant Amazon QuickSight access to Amazon Athena and the associated S3 buckets in the account. For more information on doing this, see Managing Amazon QuickSight Permissions. We can then create a new data set in Amazon QuickSight based on the Athena table that was created during deployment.
+We can visualize Amazon Comprehend’s sentiment analysis by using Amazon QuickSight. First, we must grant Amazon QuickSight access to Amazon Athena and the associated S3 buckets in the account. 
+
+For more information on doing this, see Managing Amazon QuickSight Permissions https://docs.aws.amazon.com/quicksight/latest/user/managing-permissions.html.
+
+We can then create a new data set in Amazon QuickSight based on the Athena table that was created during deployment.
 After setting up permissions, we can create a new analysis in Amazon QuickSight by choosing New analysis.
 ![main_arch](./images/Step-7.png) 
 Then we add a new data set.
 ![main_arch](./images/Step-7-1.png)
 
 # Step 8: We choose Athena as the source and give the data source a name such as connectcomprehend.
- 
+
+Choose Athena as the source. For example: New Analysis -> Create Data Set
+
 Choose the name of the database and the Use Customer SQL
 ![main_arch](./images/Step-8.png)
 Give a Name to Custom SQL such as “Sentiment_SQL” and enter below SQL. Replace Database name <YOUR DATABASE NAME> with your one.
