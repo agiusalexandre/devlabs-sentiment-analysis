@@ -27,7 +27,7 @@ Amazon QuickSight analyzes call recording and performs sentiment, and performs a
 
 ![main_arch](./images/main_arch.png)
 
-First, login to AWS Console and Click on this ![main_arch](./cloudformation/sentimentnalayis.yaml) to launch the template in CloudFormation.
+First, login to AWS Console and Click on this ![main_arch](./template/sentiment-analysis.yaml) to launch the template in CloudFormation.
 In the console, provide the following parameters:
 •	RecordingsPrefix: S3 prefix where split recordings will be stored
 •	TranscriptsPrefix: S3 prefix where transcribed text will be stored
@@ -38,15 +38,14 @@ Kindly note down the bucket name created in the cloudformation template.
 
 Step 1 : Choose Amazon Polly in AWS services list
 
- 
+![main_arch](./images/Step-1.png)
 
 
 Step 2 : Type in a text you want to analyse
 For example : Hi! My name is Joanna. I will read any text you type here.
 
- 
 Step 3: Click Synthesis to S3
-
+![main_arch](./images/Step-2.png)
  
 
 
@@ -55,44 +54,44 @@ S3 key prefix – recordings/
 
 Note: ensure slash is added at the back of prefix
  
- 
+ ![main_arch](./images/Step-3.png)
 
 Click synthesize
 
 Task will be created
 
- 
+ ![main_arch](./images/Step-3-1.png)
 
 
 Step 4: MP3 file will be created in the connect bucket
 
- 
+ ![main_arch](./images/Step-4.png)
 
 Step 5: Choose transcribe and check the job status
- 
+ ![main_arch](./images/Step-5.png)
 
 Once the job completes the MP3 is converted back into text and stored in same s3 bucket in the folder transcripts
- 
+ ![main_arch](./images/Step-5-1.png)
 
 Step 6: Comprehend would be triggered and sentiment analysis will be performed on the transcribed audio and stored in S3 comprehend folder
 
  
-
+![main_arch](./images/Step-6.png)
 
 
 
  
-Step 6: Visualize Analysis using Amazon QuickSight
+Step 7: Visualize Analysis using Amazon QuickSight
 We can visualize Amazon Comprehend’s sentiment analysis by using Amazon QuickSight. First, we must grant Amazon QuickSight access to Amazon Athena and the associated S3 buckets in the account. For more information on doing this, see Managing Amazon QuickSight Permissions. We can then create a new data set in Amazon QuickSight based on the Athena table that was created during deployment.
 After setting up permissions, we can create a new analysis in Amazon QuickSight by choosing New analysis.
- 
+![main_arch](./images/Step-7.png) 
 Then we add a new data set.
- 
+![main_arch](./images/Step-7-1.png)
 
-STEP 7: We choose Athena as the source and give the data source a name such as connectcomprehend.
+STEP 8: We choose Athena as the source and give the data source a name such as connectcomprehend.
  
 Choose the name of the database and the Use Customer SQL
- 
+![main_arch](./images/Step-8.png)
 Give a Name to Custom SQL such as “Sentiment_SQL” and enter below SQL. Replace Database name <YOUR DATABASE NAME> with your one.
 WITH sentiment AS (
   SELECT
@@ -118,12 +117,13 @@ FROM
 
 Choose Confirm query.
  
-Step 8: Select Import to SPICE option and then choose Visualize
- 
+Step 9: Select Import to SPICE option and then choose Visualize
+
+![main_arch](./images/Step-8-1.png)
 After that, we should see the following screen.
  
-Step 9: Now we can create some visualizations by adding Sentiment Analysis into visualization.
- 
+Step 10: Now we can create some visualizations by adding Sentiment Analysis into visualization.
+![main_arch](./images/Step-9.png)
 
 
 
