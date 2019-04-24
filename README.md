@@ -25,7 +25,7 @@ Amazon Comprehend → Entity, sentiment, key phrases, and language output into a
 AWS Glue maintains the database catalogue and database table structure. Amazon Athena queries data in Amazon S3 using the AWS Glue database catalogue.
 Amazon QuickSight analyzes call recording and performs sentiment, and performs a key phrases analysis of caller-agent interactions.
 
-![main_arch](./images/main_arch.png)
+![main_arch](./images/main.gif)
 
 First, login to AWS Console and Click on this ![main_arch](./template/sentiment-analysis.yaml) to launch the template in CloudFormation.
 In the console, provide the following parameters:
