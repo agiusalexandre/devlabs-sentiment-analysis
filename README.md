@@ -133,5 +133,13 @@ After that, we should see the following screen.
 # Step 10: Now we can create some visualizations by adding Sentiment Analysis into visualization.
 ![main_arch](./images/Step-9.png)
 
+After that, we should see the following screen.
+
+![main_arch](./images/Step-10.gif)
+
+Now we can create some visualizations by adding Sentiment Analysis into visualization.
+
+![main_arch](./images/Step-11.gif)
+
 
 
