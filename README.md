@@ -36,7 +36,7 @@ In the console, provide the following parameters:
 •	TranscriptionJobCheckWaitTime: Time in seconds to wait between transcription wait checks
 Leave all other default values. Select both “I acknowledge that AWS CloudFormation might create IAM resources” checkboxes, click on “Create Change Set”, and then choose Execute.
 
-Kindly note down the bucket name created in the cloudformation template.
+### Kindly note down the bucket name created in the cloudformation template.
 
 # Step 1 : Choose Amazon Polly in AWS services list
 
@@ -51,7 +51,7 @@ For example : Hi! My name is Joanna. I will read any text you type here.
  
 
 
-### S3 output bucket – xxxxx-connect  (Available in S3)
+### S3 output bucket – xxxxx-connect  (Available in S3) (Kindly refer to bucket name in cloudformation template)
 S3 key prefix – recordings/
 
 #### Note: ensure slash is added at the back of prefix
