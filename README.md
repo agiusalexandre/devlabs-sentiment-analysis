@@ -27,7 +27,7 @@ Amazon QuickSight analyzes call recording and performs sentiment, and performs a
 
 ![main_arch](./images/main.gif)
 
-First, login to AWS Console and Click on this ![main_arch](./template/sentiment-analysis.yaml) to launch the template in CloudFormation.
+First, login to AWS Console [AWS Console](https://us-east-1.console.aws.amazon.com/) and Click on this [Cloudformation](https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/new?stackName=sentiment-analysis-call-recordings&templateURL=https://github.com/deenadat/devlabs-sentiment-analysis/blob/master/template/sentiment-analysis.yaml) to launch the template in CloudFormation.
 # Choose us-east-1 region
 
 In the console, provide the following parameters:
