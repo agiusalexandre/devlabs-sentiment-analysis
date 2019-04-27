@@ -99,29 +99,33 @@ Then we add a new data set.
 Choose Athena as the source. For example: New Analysis -> Create Data Set
 
 Choose the name of the database and the Use Customer SQL
+
+### Kindly note down the database name
+
 ![main_arch](./images/Step-8.png)
 Give a Name to Custom SQL such as “Sentiment_SQL” and enter below SQL. Replace Database name <YOUR DATABASE NAME> with your one.
+ 
 WITH sentiment AS (
+
   SELECT
+  
     contactid
+    
     ,talker
+    
     ,text
+    
     ,sentiment
+    
   FROM
+  
     "<YOUR DATABASE NAME>"."sentiment_analysis"
+    
 )
-SELECT
-  contactid
-  ,talker
-  ,transcript
-  ,sentimentresult.sentiment
-  ,sentimentresult.sentimentscore.positive
-  ,sentimentresult.sentimentscore.negative
-  ,sentimentresult.sentimentscore.mixed
-FROM
-  sentiment
-  CROSS JOIN UNNEST(text) as t(transcript)
-  CROSS JOIN UNNEST(sentiment) as t(sentimentresult)
+
+SELECT contactid,talker,transcript ,sentimentresult.sentiment ,sentimentresult.sentimentscore.positive ,sentimentresult.sentimentscore.negative ,sentimentresult.sentimentscore.mixed
+
+FROM sentiment  CROSS JOIN UNNEST(text) as t(transcript) CROSS JOIN UNNEST(sentiment) as t(sentimentresult)
 
 Choose Confirm query.
  
