@@ -139,5 +139,7 @@ Now we can create some visualizations by adding Sentiment Analysis into visualiz
 
 ![main_arch](./images/Step-11.gif)
 
+# Clean up the stack
 
+Delete the cloudformation template created initially.
 
